@@ -14,6 +14,7 @@ function isValidURL(url: string) {
 }
 
 export async function POST(request: Request) {
+
   const animeBody: AnimeType = await request.json();
 
   if (!animeBody.name || !isValidURL(animeBody.image)) {
